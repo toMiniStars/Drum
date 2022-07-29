@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title> Drum Machine </title>
+    <style>
+    * {
+      text-align: center;
+      background-color: gray;
+    }
+    .card {
+      font-size: 2rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      background-color: lightcyan;
+    }
+    .drum-pad {
+      font-size: 6rem;
+    }
+    .title {
+      font-size: 3rem;
+      color: magenta;
+      font-weight: bold;
+    }
+    </style>
+    <script>
+              function play(str) {
+                      if (str === "q" || str === "Q") {
+                        document.getElementById('display').innerText = "stay-chilled";
+                      } else if(str === "w" || str === "W") {
+                        document.getElementById('display').innerText = "smile";
+                      } else if(str === "e" || str === "E") {
+                        document.getElementById('display').innerText = "depth";
+                      } else if(str === "a" || str === "A") {
+                        document.getElementById('display').innerText = "sweet-heat";
+                      } else if(str === "s" || str === "S") {
+                        document.getElementById('display').innerText = "clouds";
+                      } else if(str === "d" || str === "D") {
+                        document.getElementById('display').innerText = "time-loop";
+                      } else if(str === "z" || str === "Z") {
+                        document.getElementById('display').innerText = "alone-at";
+                      } else if(str === "x" || str === "X") {
+                        document.getElementById('display').innerText = "breathe";
+                      } else if(str === "c" || str === "C") {
+                        document.getElementById('display').innerText = "sunny-day";
+                      }
+              let audio = document.getElementById(str);
+              audio.play();
+            }
+      window.document.onkeyup = function(event) {
+              let keystroke = event.key;
+              if (event.key == "q" || keystroke === "Q"){
+                      play("Q");
+                    } else if(keystroke === "w" || keystroke === "W") {
+                            play("W");
+                    }else if(keystroke === "e" || keystroke === "E") {
+                            play("E");
+                    }else if(keystroke === "a" || keystroke === "A") {
+                            play("A");
+                    }else if(keystroke === "s"  || keystroke === "S") {
+                            play("S");
+                    }else if(keystroke === "D" || keystroke === "D") {
+                            play("D");
+                    }else if(keystroke === "Z" || keystroke === "Z") {
+                            play("Z");
+                    }else if(keystroke === "X" || keystroke === "X") {
+                            play("X");
+                    }else if(keystroke === "c" || keystroke === "C") {
+                            play("C");
+                    }
+            }
+    </script>
+  </head>
+  <body>
+    <div id="drum-machine">
+      <h1 class="title"> Drum Machine </h1>
+      <div class="card my-3">
+      <div class="card-body">
+      <div id="display"> The Display is Empty.</div>
+      </div>
+      </div>
+      <button class="drum-pad btn btn-primary btn-lg" id="drum-0" onclick="play('Q')">Q<audio src="./clip/tunetank.com_2161_stay-chilled_by_pillowvibes.mp3" class="clip" id="Q"></button>
+      <button class="drum-pad btn btn-primary btn-lg" id="drum-1" onclick="play('W')">W<audio src="./clip/tunetank.com_4215_depth_by_decibel.mp3" class="clip" id="W"></button>
+      <button class="drum-pad btn btn-primary btn-lg" id="drum-2" onclick="play('E')">E<audio src="./clip/tunetank.com_4269_clouds_by_ahoami.mp3" class="clip" id="E"></button>
+      <button class="drum-pad btn btn-primary btn-lg" id="drum-3" onclick="play('A')">A<audio src="./clip/tunetank.com_2351_smile_by_noisesoul.mp3" class="clip" id="A"></button>
+      <button class="drum-pad btn btn-primary btn-lg" id="drum-4" onclick="play('S')">S<audio src="./clip/tunetank.com_980_dawnkeeper_by_alexeyr.mp3" class="clip" id="S"></button>
+      <button class="drum-pad btn btn-primary btn-lg" id="drum-5" onclick="play('D')">D<audio src="./clip/tunetank.com_4231_sweet-heat_by_decibel.mp3" class="clip" id="D"></button>
+      <button class="drum-pad btn btn-primary btn-lg" id="drum-6" onclick="play('Z')">Z<audio src="./clip/tunetank.com_5646_breathe_by_cloudsystem.mp3" class="clip" id="Z"></button>
+      <button class="drum-pad btn btn-primary btn-lg" id="drum-7" onclick="play('X')">X<audio src="./clip/tunetank.com_5410_time-loop_by_nuclear-wave.mp3" class="clip" id="X"></button>
+      <button class="drum-pad btn btn-primary btn-lg" id="drum-8" onclick="play('C')">C<audio src="./clip/tunetank.com_5761_sunny-day_by_romanov_studio.mp3" class="clip" id="C"></button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
